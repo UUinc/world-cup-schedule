@@ -1,0 +1,39 @@
+.Footer
+{
+    text-align: center;
+    background-color: #313334;
+    padding: 10px 0;
+}
+.Footer-Bottom
+{
+    padding-top: 10px;
+}
+.Footer-Social 
+{
+    display: flex;
+    justify-content:center;
+}
+.Footer-Social-Icon
+{
+    padding: 10px;
+    padding-bottom: 0;
+}
+.Footer-Social-Icon img
+{
+    width: 35px;
+}
+
+h2, p
+{
+    color: #a8203d;
+}
+span
+{
+    color: white;
+}
+hr
+{
+    opacity: 0.3;
+    margin: 0 0 10px 20%;
+    width: 60%;
+}
