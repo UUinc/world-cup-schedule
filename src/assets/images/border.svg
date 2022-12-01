@@ -1,0 +1,29 @@
+<svg width="50" height="575"><path d="
+      M 0 25
+      L 24 25
+      L 24 100
+      L 0 100
+      M 24 62.5
+      L 50 62.5
+    
+      M 0 175
+      L 24 175
+      L 24 250
+      L 0 250
+      M 24 212.5
+      L 50 212.5
+    
+      M 0 325
+      L 24 325
+      L 24 400
+      L 0 400
+      M 24 362.5
+      L 50 362.5
+    
+      M 0 475
+      L 24 475
+      L 24 550
+      L 0 550
+      M 24 512.5
+      L 50 512.5
+    " stroke="var(--border-color)" stroke-width="var(--border-width)" fill="none"></path></svg>
