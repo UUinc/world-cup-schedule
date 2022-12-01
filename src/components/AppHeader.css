@@ -1,11 +1,13 @@
 .Header
 {
     text-align: center;
-    background-color: #313334;
+    background-color: #92102c;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/images/pattern.png");
+    background-size: contain;
     padding: 15px 0;
 }
 
 h1
 {
-    color: #a8203d;
+    color: white;
 }

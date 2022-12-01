@@ -1,7 +1,9 @@
 .Footer
 {
     text-align: center;
-    background-color: #313334;
+    background-color: #92102c;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/images/pattern.png");
+    background-size: contain;
     padding: 10px 0;
 }
 .Footer-Bottom
@@ -23,11 +25,7 @@
     width: 35px;
 }
 
-h2, p
-{
-    color: #a8203d;
-}
-span
+h2, p, span
 {
     color: white;
 }
