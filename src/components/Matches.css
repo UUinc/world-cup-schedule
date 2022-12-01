@@ -1,0 +1,51 @@
+.Matches
+{
+    height: 500px;
+    width: 100%;
+
+    background-image: linear-gradient(#1e1e20, #1e1e20, #09090a7e);
+}
+.Matches-match
+{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 90px;
+    border: 0;
+    margin: 25px 20%;
+}
+.Matches-match-team
+{
+    width: 25%;
+    padding-top: 12px;
+    background-color: #92102c;
+}
+.team-left
+{
+    border-radius: 40px 0 0 40px;
+}
+.team-right 
+{
+    border-radius: 0 40px 40px 0;
+}
+.Matches-match-team > img
+{
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 40px;
+}
+.Matches-match-info
+{
+    flex: 1;
+    padding-top: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.Matches-match-info *
+{
+    color: black;
+}
+.Matches-match-info h2 
+{
+    font-size: xx-large;
+}

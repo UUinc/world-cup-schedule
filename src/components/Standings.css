@@ -1,7 +1,45 @@
 .Standings
 {
-    height: 500px;
     width: 100%;
-
-    background-image: linear-gradient(#1e1e20, #1e1e20, #09090a7e);
+}
+.Standing-container
+{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+.Standing
+{
+    text-align: center;
+    background-color: white;
+    width: 60%;
+    border-radius: 10px;
+}
+.Standing-header
+{
+    background-color: #92102c;
+    border-radius: 10px 10px 0 0;
+}
+.Standing-table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.Standing-table tr
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.Standing-table-header
+{
+    color: white;
+    background-color: #6e0c22;
+}
+.Standing-table-team
+{
+    display: flex;
+    justify-content: center;
+}
+.Standing-table-team *
+{
+    padding: 5px;
 }
