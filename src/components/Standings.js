@@ -85,6 +85,7 @@ function Standings() {
                     </table>
                 </div>
             </div>
+            <hr />
         </div>
     );
 }
