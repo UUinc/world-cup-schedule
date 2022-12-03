@@ -7,9 +7,7 @@
 .Bracket-container
 {
     display: flex;
-    justify-content: left;
-    overflow: scroll;
-    overflow-y: hidden;
+    justify-content: center;
 }
 
 /* rouds start */
@@ -83,3 +81,12 @@
     padding: 5px 18px;
 }
 /* match end */
+
+@media screen and (max-width: 1764px) {
+    .Bracket-container 
+    {
+        justify-content: left;
+        overflow: scroll;
+        overflow-y: hidden;
+    }
+}
