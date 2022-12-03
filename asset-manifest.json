@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/world-cup-schedule/static/css/main.7f0b3900.css",
+    "main.css": "/world-cup-schedule/static/css/main.08f3902e.css",
     "main.js": "/world-cup-schedule/static/js/main.7e36f18b.js",
     "static/media/logo.png": "/world-cup-schedule/static/media/logo.e9f7c03c76f7a94877d7.png",
     "static/media/pattern.png": "/world-cup-schedule/static/media/pattern.31ac2e06fd3f2886fac5.png",
@@ -10,11 +10,11 @@
     "static/media/linkedin.png": "/world-cup-schedule/static/media/linkedin.1f11fc2be623110007bf.png",
     "static/media/world-cup.png": "/world-cup-schedule/static/media/world-cup.c9f535498c517c0d4388.png",
     "index.html": "/world-cup-schedule/index.html",
-    "main.7f0b3900.css.map": "/world-cup-schedule/static/css/main.7f0b3900.css.map",
+    "main.08f3902e.css.map": "/world-cup-schedule/static/css/main.08f3902e.css.map",
     "main.7e36f18b.js.map": "/world-cup-schedule/static/js/main.7e36f18b.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f0b3900.css",
+    "static/css/main.08f3902e.css",
     "static/js/main.7e36f18b.js"
   ]
 }
