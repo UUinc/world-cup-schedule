@@ -7,5 +7,77 @@
 .Bracket-container
 {
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
+
+/* rouds start */
+.container-title
+{
+    color: white;
+    border: 2px solid white;
+    padding: 5px;
+    margin: 30px 0;
+}
+.container-round16
+{
+}
+.container-quarter-finals .match
+{
+    margin-top: 82px;
+    margin-bottom: 140px;
+}
+.container-semi-finals .match
+{
+    margin-top: 188px;
+}
+.container-final
+{
+}
+.container-final .match
+{
+    margin-bottom: 150px;
+}
+.final-cup
+{
+    margin-bottom: 14px;
+}
+.final-cup img
+{
+    margin-left: 30px;
+    width: 140px;
+}
+/* rounds end */
+/* linker start */
+.container-linker
+{
+    margin-top: 105px;
+}
+/* linker end */
+/* math start */
+.match
+{
+    margin: 0 0 35px 0;
+}
+.match-team
+{
+    display: flex;
+}
+.match-team-info
+{
+    display: flex;
+    border: 2px solid white;
+    border-right: 1px solid white;
+    padding: 5px 60px 5px 0;
+}
+.match-team-info img
+{
+    width: 25px;
+    margin: 2px 5px 0 5px;
+}
+.match-team-score
+{
+    border: 2px solid white;
+    border-left: 1px solid white;
+    padding: 5px 18px;
+}
+/* match end */
