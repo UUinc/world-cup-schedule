@@ -2,6 +2,7 @@ import React from "react";
 import "./Bracket.css";
 
 import worldCupImage from "../assets/images/world-cup.png";
+import unknownImage from "../assets/images/unknown.png";
 
 function Bracket() {
     const bracketWidth = 4;
@@ -16,51 +17,25 @@ function Bracket() {
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/NL/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>Netherlands</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/US/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>USA</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p>9</p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -68,25 +43,25 @@ function Bracket() {
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/AR/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>Argentina</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/AU/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>Australia</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -94,25 +69,51 @@ function Bracket() {
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/JP/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>Japan</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/HR/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>Croatia</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="match">
+                        <div className="match-team">
+                            <div className="match-team-info">
+                                <img
+                                    src="https://flagsapi.com/BR/flat/64.png"
+                                    alt="flag"
+                                />
+                                <p>Brazil</p>
+                            </div>
+                            <div className="match-team-score">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div className="match-team">
+                            <div className="match-team-info">
+                                <img
+                                    src="https://flagsapi.com/KR/flat/64.png"
+                                    alt="flag"
+                                />
+                                <p>South Korea</p>
+                            </div>
+                            <div className="match-team-score">
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -148,52 +149,40 @@ function Bracket() {
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -222,26 +211,20 @@ function Bracket() {
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -269,26 +252,20 @@ function Bracket() {
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -298,26 +275,20 @@ function Bracket() {
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -342,26 +313,20 @@ function Bracket() {
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -390,52 +355,40 @@ function Bracket() {
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
+                                <img src={unknownImage} alt="flag" />
+                                <p>?</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -472,51 +425,25 @@ function Bracket() {
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>England</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/SN/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>Senegal</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p>9</p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -524,25 +451,25 @@ function Bracket() {
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/FR/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>France</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/PL/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>Poland</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -550,25 +477,51 @@ function Bracket() {
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/MA/flat/64.png"
                                     alt="flag"
                                 />
                                 <p>Morocco</p>
                             </div>
                             <div className="match-team-score">
-                                <p>9</p>
+                                <p></p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                    src="https://flagsapi.com/ES/flat/64.png"
                                     alt="flag"
                                 />
-                                <p>Morocco</p>
+                                <p>Spain</p>
                             </div>
                             <div className="match-team-score">
-                                <p>1</p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="match">
+                        <div className="match-team">
+                            <div className="match-team-info">
+                                <img
+                                    src="https://flagsapi.com/PT/flat/64.png"
+                                    alt="flag"
+                                />
+                                <p>Portugal</p>
+                            </div>
+                            <div className="match-team-score">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div className="match-team">
+                            <div className="match-team-info">
+                                <img
+                                    src="https://flagsapi.com/CH/flat/64.png"
+                                    alt="flag"
+                                />
+                                <p>Switzerland</p>
+                            </div>
+                            <div className="match-team-score">
+                                <p></p>
                             </div>
                         </div>
                     </div>

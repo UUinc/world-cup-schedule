@@ -17,7 +17,7 @@
 .Matches-match-team
 {
     width: 25%;
-    padding-top: 12px;
+    padding-top: 8px;
     background-color: #92102c;
 }
 .team-left
@@ -30,10 +30,7 @@
 }
 .Matches-match-team > img
 {
-    height: 40px;
-    width: 40px;
-    border: 2px solid white;
-    border-radius: 40px;
+    width: 50px;
 }
 .Matches-match-info
 {

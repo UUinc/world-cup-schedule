@@ -8,6 +8,7 @@
 {
     display: flex;
     justify-content: center;
+    margin: 0 20px;
 }
 
 /* rouds start */
@@ -65,20 +66,33 @@
 .match-team-info
 {
     display: flex;
+    height: 31px;
+    width: 150px;
     border: 2px solid white;
     border-right: 1px solid white;
-    padding: 5px 60px 5px 0;
 }
 .match-team-info img
 {
-    width: 25px;
-    margin: 2px 5px 0 5px;
+    width: 30px;
+    image-rendering: optimizeQuality;
+    margin: 0 5px;
+}
+.match-team-info p
+{
+    margin-top: 3px;
 }
 .match-team-score
 {
+    text-align: center;
+    height: 31px;
+    width: 45px;
+    background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     border-left: 1px solid white;
-    padding: 5px 18px;
+}
+.match-team-score p
+{
+    margin-top: 3px;
 }
 /* match end */
 

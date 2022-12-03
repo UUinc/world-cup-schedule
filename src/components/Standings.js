@@ -22,7 +22,7 @@ function Standings() {
                             <td>
                                 <div className="Standing-table-team">
                                     <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                        src="https://flagsapi.com/MA/flat/64.png"
                                         alt="flag"
                                         width="40"
                                     />
@@ -38,7 +38,7 @@ function Standings() {
                             <td>
                                 <div className="Standing-table-team">
                                     <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                        src="https://flagsapi.com/MA/flat/64.png"
                                         alt="flag"
                                         width="40"
                                     />
@@ -54,7 +54,7 @@ function Standings() {
                             <td>
                                 <div className="Standing-table-team">
                                     <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                        src="https://flagsapi.com/MA/flat/64.png"
                                         alt="flag"
                                         width="40"
                                     />
@@ -70,7 +70,7 @@ function Standings() {
                             <td>
                                 <div className="Standing-table-team">
                                     <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+                                        src="https://flagsapi.com/MA/flat/64.png"
                                         alt="flag"
                                         width="40"
                                     />
