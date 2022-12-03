@@ -4,12 +4,12 @@
     width: 100%;
 
     background-image: linear-gradient(#1e1e20, #1e1e20, #09090a7e);
+    text-align: center;
 }
 .Matches-match
 {
     display: flex;
     justify-content: space-around;
-    text-align: center;
     height: 90px;
     border: 0;
     margin: 25px 20%;

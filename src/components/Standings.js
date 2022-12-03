@@ -4,7 +4,7 @@ import "./Standings.css";
 function Standings() {
     return (
         <div className="Standings">
-            <h1>Standings:</h1>
+            <h1>Standings</h1>
             <div className="Standing-container">
                 <div className="Standing">
                     <div className="Standing-header">

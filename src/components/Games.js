@@ -1,10 +1,10 @@
 import React from "react";
-import "./Matches.css";
+import "./Games.css";
 
-function Matches() {
+function Games() {
     return (
         <div className="Matches">
-            <h1>Matches:</h1>
+            <h1>Games</h1>
             <div className="Matches-match">
                 <div className="Matches-match-team team-left">
                     <img src="https://flagsapi.com/MA/flat/64.png" alt="flag" />
@@ -23,4 +23,4 @@ function Matches() {
     );
 }
 
-export default Matches;
+export default Games;

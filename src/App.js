@@ -2,7 +2,7 @@ import "./App.css";
 import AppHeader from "./components/AppHeader";
 import Bracket from "./components/Bracket";
 import Standings from "./components/Standings";
-import Matches from "./components/Matches";
+import Games from "./components/Games";
 import AppFooter from "./components/AppFooter";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
             <AppHeader></AppHeader>
             <Bracket></Bracket>
             <Standings></Standings>
-            <Matches></Matches>
+            <Games></Games>
             <AppFooter></AppFooter>
         </div>
     );
