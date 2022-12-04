@@ -14,7 +14,7 @@ function Bracket() {
         getFromApi(
             "https://uuinc.github.io/projects/world-cup-schedule/bracket.json"
         ).then((result) => SetBracket(result.bracket));
-    }, []);
+    }, [bracket]);
 
     return (
         <div className="Bracket">

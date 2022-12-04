@@ -9,7 +9,7 @@ function Standings() {
         getFromApi(
             "https://uuinc.github.io/projects/world-cup-schedule/standings.json"
         ).then((result) => SetStandings(result.standings));
-    }, []);
+    }, [standings]);
 
     return (
         <div className="Standings">

@@ -9,7 +9,7 @@ function Games() {
         getFromApi(
             "https://uuinc.github.io/projects/world-cup-schedule/games.json"
         ).then((result) => SetGames(result.games));
-    }, []);
+    }, [games]);
 
     return (
         <div className="Matches">
