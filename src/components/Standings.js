@@ -4,10 +4,11 @@ import { getFromApi } from "../assets/scripts/GetFromApi";
 
 function Standings() {
     const [standings, SetStandings] = useState([]);
+
     useEffect(() => {
         getFromApi(
             "https://uuinc.github.io/projects/world-cup-schedule/standings.json"
-        ).then((result) => SetStandings(result));
+        ).then((result) => SetStandings(result.standings));
     }, []);
 
     return (
