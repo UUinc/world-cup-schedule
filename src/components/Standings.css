@@ -29,6 +29,10 @@
 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+.Standing-table td 
+{
+    width: 10%;
+}
 .Standing-table-header
 {
     color: white;
@@ -37,7 +41,8 @@
 .Standing-table-team
 {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 5px;
 }
 .Standing-table-team *
 {
