@@ -21,10 +21,11 @@ function Bracket() {
             <div className="Bracket-container">
                 <div className="container-round16">
                     <div className="container-title">
-                        <h4>{bracket[0].name}</h4>
+                        <h4>{bracket[0]?.name}</h4>
                     </div>
-                    {bracket[0].games.map((game, index) => {
-                        if (index > bracket[0].games.length / 2 - 1) return;
+                    {bracket[0]?.games.map((game, index) => {
+                        if (index > bracket[0]?.games.length / 2 - 1)
+                            return <></>;
                         return (
                             <div className="match">
                                 {game.team.map((team) => (
@@ -71,10 +72,11 @@ function Bracket() {
                 </div>
                 <div className="container-quarter-finals">
                     <div className="container-title">
-                        <h4>{bracket[1].name}</h4>
+                        <h4>{bracket[1]?.name}</h4>
                     </div>
-                    {bracket[1].games.map((game, index) => {
-                        if (index > bracket[1].games.length / 2 - 1) return;
+                    {bracket[1]?.games.map((game, index) => {
+                        if (index > bracket[1]?.games.length / 2 - 1)
+                            return <></>;
                         return (
                             <div className="match">
                                 {game.team.map((team) => (
@@ -118,10 +120,11 @@ function Bracket() {
                 </div>
                 <div className="container-semi-finals">
                     <div className="container-title">
-                        <h4>{bracket[2].name}</h4>
+                        <h4>{bracket[2]?.name}</h4>
                     </div>
-                    {bracket[2].games.map((game, index) => {
-                        if (index > bracket[2].games.length / 2 - 1) return;
+                    {bracket[2]?.games.map((game, index) => {
+                        if (index > bracket[2]?.games.length / 2 - 1)
+                            return <></>;
                         return (
                             <div className="match">
                                 {game.team.map((team) => (
@@ -161,7 +164,7 @@ function Bracket() {
                 </div>
                 <div className="container-final">
                     <div className="container-title">
-                        <h4>{bracket[4].name}</h4>
+                        <h4>{bracket[4]?.name}</h4>
                     </div>
                     <div className="final-cup">
                         <img src={worldCupImage} alt="word cup" />
@@ -171,43 +174,45 @@ function Bracket() {
                             <div className="match-team-info">
                                 <img
                                     src={
-                                        bracket[4].games[0].team[0].image === ""
+                                        bracket[4]?.games[0].team[0].image ===
+                                        ""
                                             ? unknownImage
-                                            : bracket[4].games[0].team[0].image
+                                            : bracket[4]?.games[0].team[0].image
                                     }
                                     alt={
-                                        bracket[4].games[0].team[0].name +
+                                        bracket[4]?.games[0].team[0].name +
                                         " flag"
                                     }
                                 />
-                                <p>{bracket[4].games[0].team[0].name}</p>
+                                <p>{bracket[4]?.games[0].team[0].name}</p>
                             </div>
                             <div className="match-team-score">
-                                <p>{bracket[4].games[0].team[0].score}</p>
+                                <p>{bracket[4]?.games[0].team[0].score}</p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
                                 <img
                                     src={
-                                        bracket[4].games[0].team[1].image === ""
+                                        bracket[4]?.games[0].team[1].image ===
+                                        ""
                                             ? unknownImage
-                                            : bracket[4].games[0].team[1].image
+                                            : bracket[4]?.games[0].team[1].image
                                     }
                                     alt={
-                                        bracket[4].games[0].team[1].name +
+                                        bracket[4]?.games[0].team[1].name +
                                         " flag"
                                     }
                                 />
-                                <p>{bracket[4].games[0].team[1].name}</p>
+                                <p>{bracket[4]?.games[0].team[1].name}</p>
                             </div>
                             <div className="match-team-score">
-                                <p>{bracket[4].games[0].team[1].score}</p>
+                                <p>{bracket[4]?.games[0].team[1].score}</p>
                             </div>
                         </div>
                     </div>
                     <div className="container-title">
-                        <h4>{bracket[3].name}</h4>
+                        <h4>{bracket[3]?.name}</h4>
                     </div>
 
                     <div className="match">
@@ -215,19 +220,20 @@ function Bracket() {
                             <div className="match-team-info">
                                 <img
                                     src={
-                                        bracket[3].games[0].team[0].image === ""
+                                        bracket[3]?.games[0].team[0].image ===
+                                        ""
                                             ? unknownImage
-                                            : bracket[3].games[0].team[0].image
+                                            : bracket[3]?.games[0].team[0].image
                                     }
                                     alt={
-                                        bracket[3].games[0].team[0].name +
+                                        bracket[3]?.games[0].team[0].name +
                                         " flag"
                                     }
                                 />
-                                <p>{bracket[3].games[0].team[0].name}</p>
+                                <p>{bracket[3]?.games[0].team[0].name}</p>
                             </div>
                             <div className="match-team-score">
-                                <p>{bracket[3].games[0].team[0].score}</p>
+                                <p>{bracket[3]?.games[0].team[0].score}</p>
                             </div>
                         </div>
 
@@ -235,19 +241,20 @@ function Bracket() {
                             <div className="match-team-info">
                                 <img
                                     src={
-                                        bracket[3].games[0].team[1].image === ""
+                                        bracket[3]?.games[0].team[1].image ===
+                                        ""
                                             ? unknownImage
-                                            : bracket[3].games[0].team[1].image
+                                            : bracket[3]?.games[0].team[1].image
                                     }
                                     alt={
-                                        bracket[3].games[0].team[1].name +
+                                        bracket[3]?.games[0].team[1].name +
                                         " flag"
                                     }
                                 />
-                                <p>{bracket[3].games[0].team[1].name}</p>
+                                <p>{bracket[3]?.games[0].team[1].name}</p>
                             </div>
                             <div className="match-team-score">
-                                <p>{bracket[3].games[0].team[1].score}</p>
+                                <p>{bracket[3]?.games[0].team[1].score}</p>
                             </div>
                         </div>
                     </div>
@@ -267,33 +274,33 @@ function Bracket() {
                 </div>
                 <div className="container-semi-finals">
                     <div className="container-title">
-                        <h4>{bracket[2].name}</h4>
+                        <h4>{bracket[2]?.name}</h4>
                     </div>
-                    {bracket[2].games.map((game, index) => {
-                        if (index > bracket[2].games.length / 2 - 1) {
-                            return (
-                                <div className="match">
-                                    {game.team.map((team) => (
-                                        <div className="match-team">
-                                            <div className="match-team-info">
-                                                <img
-                                                    src={
-                                                        team.image === ""
-                                                            ? unknownImage
-                                                            : team.image
-                                                    }
-                                                    alt={team.name + "flag"}
-                                                />
-                                                <p>{team.name}</p>
-                                            </div>
-                                            <div className="match-team-score">
-                                                <p>{team.score}</p>
-                                            </div>
+                    {bracket[2]?.games.map((game, index) => {
+                        if (index <= bracket[2]?.games.length / 2 - 1)
+                            return <></>;
+                        return (
+                            <div className="match">
+                                {game.team.map((team) => (
+                                    <div className="match-team">
+                                        <div className="match-team-info">
+                                            <img
+                                                src={
+                                                    team.image === ""
+                                                        ? unknownImage
+                                                        : team.image
+                                                }
+                                                alt={team.name + "flag"}
+                                            />
+                                            <p>{team.name}</p>
                                         </div>
-                                    ))}
-                                </div>
-                            );
-                        }
+                                        <div className="match-team-score">
+                                            <p>{team.score}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        );
                     })}
                 </div>
                 <div className="container-linker">
@@ -315,33 +322,33 @@ function Bracket() {
                 </div>
                 <div className="container-quarter-finals">
                     <div className="container-title">
-                        <h4>{bracket[1].name}</h4>
+                        <h4>{bracket[1]?.name}</h4>
                     </div>
-                    {bracket[1].games.map((game, index) => {
-                        if (index > bracket[1].games.length / 2 - 1) {
-                            return (
-                                <div className="match">
-                                    {game.team.map((team) => (
-                                        <div className="match-team">
-                                            <div className="match-team-info">
-                                                <img
-                                                    src={
-                                                        team.image === ""
-                                                            ? unknownImage
-                                                            : team.image
-                                                    }
-                                                    alt={team.name + "flag"}
-                                                />
-                                                <p>{team.name}</p>
-                                            </div>
-                                            <div className="match-team-score">
-                                                <p>{team.score}</p>
-                                            </div>
+                    {bracket[1]?.games.map((game, index) => {
+                        if (index <= bracket[1]?.games.length / 2 - 1)
+                            return <></>;
+                        return (
+                            <div className="match">
+                                {game.team.map((team) => (
+                                    <div className="match-team">
+                                        <div className="match-team-info">
+                                            <img
+                                                src={
+                                                    team.image === ""
+                                                        ? unknownImage
+                                                        : team.image
+                                                }
+                                                alt={team.name + "flag"}
+                                            />
+                                            <p>{team.name}</p>
                                         </div>
-                                    ))}
-                                </div>
-                            );
-                        }
+                                        <div className="match-team-score">
+                                            <p>{team.score}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        );
                     })}
                 </div>
                 <div className="container-linker">
@@ -370,29 +377,29 @@ function Bracket() {
                 </div>
                 <div className="container-round16">
                     <div className="container-title">
-                        <h4>{bracket[0].name}</h4>
+                        <h4>{bracket[0]?.name}</h4>
                     </div>
-                    {bracket[0].games.map((game, index) => {
-                        if (index > bracket[0].games.length / 2 - 1) {
-                            return (
-                                <div className="match">
-                                    {game.team.map((team) => (
-                                        <div className="match-team">
-                                            <div className="match-team-info">
-                                                <img
-                                                    src={team.image}
-                                                    alt={team.name + "flag"}
-                                                />
-                                                <p>{team.name}</p>
-                                            </div>
-                                            <div className="match-team-score">
-                                                <p>{team.score}</p>
-                                            </div>
+                    {bracket[0]?.games.map((game, index) => {
+                        if (index <= bracket[0]?.games.length / 2 - 1)
+                            return <></>;
+                        return (
+                            <div className="match">
+                                {game.team.map((team) => (
+                                    <div className="match-team">
+                                        <div className="match-team-info">
+                                            <img
+                                                src={team.image}
+                                                alt={team.name + "flag"}
+                                            />
+                                            <p>{team.name}</p>
                                         </div>
-                                    ))}
-                                </div>
-                            );
-                        }
+                                        <div className="match-team-score">
+                                            <p>{team.score}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        );
                     })}
                 </div>
             </div>
