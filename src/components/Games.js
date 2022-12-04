@@ -25,6 +25,9 @@ function Games() {
                         />
                         <p>{game.team[0].name}</p>
                     </div>
+                    <div className="team-score">
+                        <h1>{game.team[0].score}</h1>
+                    </div>
                     <div className="Matches-match-info">
                         <p>{game.info.date}</p>
                         <h2>×</h2>
@@ -35,6 +38,9 @@ function Games() {
                         ) : (
                             <p style={{ color: "black" }}>{game.info.time}</p>
                         )}
+                    </div>
+                    <div className="team-score">
+                        <h1>{game.team[1].score}</h1>
                     </div>
                     <div className="Matches-match-team team-right">
                         <img

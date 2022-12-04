@@ -44,8 +44,10 @@ function Standings() {
                                     <td>{team.info.draw}</td>
                                     <td>{team.info.lose}</td>
                                     <td>
-                                        {parseInt(team.info.win) * 3 +
-                                            parseInt(team.info.draw)}
+                                        <b>
+                                            {parseInt(team.info.win) * 3 +
+                                                parseInt(team.info.draw)}
+                                        </b>
                                     </td>
                                 </tr>
                             ))}
