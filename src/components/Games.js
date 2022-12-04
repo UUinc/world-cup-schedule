@@ -6,16 +6,14 @@ function Games() {
     const [games, SetGames] = useState([]);
 
     useEffect(() => {
-        const res = getFromApi(
+        getFromApi(
             "https://uuinc.github.io/projects/world-cup-schedule/games.json"
         ).then((result) => SetGames(result.games));
-        console.log(res);
     }, []);
 
     return (
         <div className="Matches">
             <h1>Games</h1>
-            {console.log(games)}
             {games.map((game) => (
                 <div className="Matches-match">
                     <div className="Matches-match-team team-left">

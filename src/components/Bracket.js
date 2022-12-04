@@ -1,122 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Bracket.css";
+import { getFromApi } from "../assets/scripts/GetFromApi";
 
 import worldCupImage from "../assets/images/world-cup.png";
 import unknownImage from "../assets/images/unknown.png";
 
 function Bracket() {
     const bracketWidth = 4;
+
+    const [bracket, SetBracket] = useState([]);
+
+    useEffect(() => {
+        getFromApi(
+            "https://uuinc.github.io/projects/world-cup-schedule/bracket.json"
+        ).then((result) => SetBracket(result.bracket));
+    }, []);
+
     return (
         <div className="Bracket">
             <div className="Bracket-container">
                 <div className="container-round16">
                     <div className="container-title">
-                        <h4>Round of 16</h4>
+                        <h4>{bracket[0].name}</h4>
                     </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/NL/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Netherlands</p>
+                    {bracket[0].games.map((game, index) => {
+                        if (index > bracket[0].games.length / 2 - 1) return;
+                        return (
+                            <div className="match">
+                                {game.team.map((team) => (
+                                    <div className="match-team">
+                                        <div className="match-team-info">
+                                            <img
+                                                src={team.image}
+                                                alt={team.name + "flag"}
+                                            />
+                                            <p>{team.name}</p>
+                                        </div>
+                                        <div className="match-team-score">
+                                            <p>{team.score}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/US/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>USA</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/AR/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Argentina</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/AU/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Australia</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/JP/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Japan</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/HR/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Croatia</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/BR/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Brazil</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/KR/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>South Korea</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
+                        );
+                    })}
                 </div>
                 <div className="container-linker">
                     <svg width="50" height="575">
@@ -128,7 +55,7 @@ function Bracket() {
                     L 0 130
                     M 24 77
                     L 50 77
-                    
+
                     M 0 235
                     L 24 235
                     L 24 340
@@ -144,48 +71,33 @@ function Bracket() {
                 </div>
                 <div className="container-quarter-finals">
                     <div className="container-title">
-                        <h4>Quarter-finals</h4>
+                        <h4>{bracket[1].name}</h4>
                     </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
+                    {bracket[1].games.map((game, index) => {
+                        if (index > bracket[1].games.length / 2 - 1) return;
+                        return (
+                            <div className="match">
+                                {game.team.map((team) => (
+                                    <div className="match-team">
+                                        <div className="match-team-info">
+                                            <img
+                                                src={
+                                                    team.image === ""
+                                                        ? unknownImage
+                                                        : team.image
+                                                }
+                                                alt={team.name + "flag"}
+                                            />
+                                            <p>{team.name}</p>
+                                        </div>
+                                        <div className="match-team-score">
+                                            <p>{team.score}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
+                        );
+                    })}
                 </div>
                 <div className="container-linker">
                     <svg width="50" height="575">
@@ -206,28 +118,33 @@ function Bracket() {
                 </div>
                 <div className="container-semi-finals">
                     <div className="container-title">
-                        <h4>Semi-finals</h4>
+                        <h4>{bracket[2].name}</h4>
                     </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
+                    {bracket[2].games.map((game, index) => {
+                        if (index > bracket[2].games.length / 2 - 1) return;
+                        return (
+                            <div className="match">
+                                {game.team.map((team) => (
+                                    <div className="match-team">
+                                        <div className="match-team-info">
+                                            <img
+                                                src={
+                                                    team.image === ""
+                                                        ? unknownImage
+                                                        : team.image
+                                                }
+                                                alt={team.name + "flag"}
+                                            />
+                                            <p>{team.name}</p>
+                                        </div>
+                                        <div className="match-team-score">
+                                            <p>{team.score}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
+                        );
+                    })}
                 </div>
                 <div className="container-linker">
                     <svg width="50" height="575">
@@ -244,7 +161,7 @@ function Bracket() {
                 </div>
                 <div className="container-final">
                     <div className="container-title">
-                        <h4>Final</h4>
+                        <h4>{bracket[4].name}</h4>
                     </div>
                     <div className="final-cup">
                         <img src={worldCupImage} alt="word cup" />
@@ -252,43 +169,85 @@ function Bracket() {
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
+                                <img
+                                    src={
+                                        bracket[4].games[0].team[0].image === ""
+                                            ? unknownImage
+                                            : bracket[4].games[0].team[0].image
+                                    }
+                                    alt={
+                                        bracket[4].games[0].team[0].name +
+                                        " flag"
+                                    }
+                                />
+                                <p>{bracket[4].games[0].team[0].name}</p>
                             </div>
                             <div className="match-team-score">
-                                <p></p>
+                                <p>{bracket[4].games[0].team[0].score}</p>
                             </div>
                         </div>
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
+                                <img
+                                    src={
+                                        bracket[4].games[0].team[1].image === ""
+                                            ? unknownImage
+                                            : bracket[4].games[0].team[1].image
+                                    }
+                                    alt={
+                                        bracket[4].games[0].team[1].name +
+                                        " flag"
+                                    }
+                                />
+                                <p>{bracket[4].games[0].team[1].name}</p>
                             </div>
                             <div className="match-team-score">
-                                <p></p>
+                                <p>{bracket[4].games[0].team[1].score}</p>
                             </div>
                         </div>
                     </div>
                     <div className="container-title">
-                        <h4>Third place play-off</h4>
+                        <h4>{bracket[3].name}</h4>
                     </div>
+
                     <div className="match">
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
+                                <img
+                                    src={
+                                        bracket[3].games[0].team[0].image === ""
+                                            ? unknownImage
+                                            : bracket[3].games[0].team[0].image
+                                    }
+                                    alt={
+                                        bracket[3].games[0].team[0].name +
+                                        " flag"
+                                    }
+                                />
+                                <p>{bracket[3].games[0].team[0].name}</p>
                             </div>
                             <div className="match-team-score">
-                                <p></p>
+                                <p>{bracket[3].games[0].team[0].score}</p>
                             </div>
                         </div>
+
                         <div className="match-team">
                             <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
+                                <img
+                                    src={
+                                        bracket[3].games[0].team[1].image === ""
+                                            ? unknownImage
+                                            : bracket[3].games[0].team[1].image
+                                    }
+                                    alt={
+                                        bracket[3].games[0].team[1].name +
+                                        " flag"
+                                    }
+                                />
+                                <p>{bracket[3].games[0].team[1].name}</p>
                             </div>
                             <div className="match-team-score">
-                                <p></p>
+                                <p>{bracket[3].games[0].team[1].score}</p>
                             </div>
                         </div>
                     </div>
@@ -308,28 +267,34 @@ function Bracket() {
                 </div>
                 <div className="container-semi-finals">
                     <div className="container-title">
-                        <h4>Semi-finals</h4>
+                        <h4>{bracket[2].name}</h4>
                     </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
+                    {bracket[2].games.map((game, index) => {
+                        if (index > bracket[2].games.length / 2 - 1) {
+                            return (
+                                <div className="match">
+                                    {game.team.map((team) => (
+                                        <div className="match-team">
+                                            <div className="match-team-info">
+                                                <img
+                                                    src={
+                                                        team.image === ""
+                                                            ? unknownImage
+                                                            : team.image
+                                                    }
+                                                    alt={team.name + "flag"}
+                                                />
+                                                <p>{team.name}</p>
+                                            </div>
+                                            <div className="match-team-score">
+                                                <p>{team.score}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            );
+                        }
+                    })}
                 </div>
                 <div className="container-linker">
                     <svg width="50" height="575">
@@ -350,48 +315,34 @@ function Bracket() {
                 </div>
                 <div className="container-quarter-finals">
                     <div className="container-title">
-                        <h4>Quarter-finals</h4>
+                        <h4>{bracket[1].name}</h4>
                     </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img src={unknownImage} alt="flag" />
-                                <p>?</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
+                    {bracket[1].games.map((game, index) => {
+                        if (index > bracket[1].games.length / 2 - 1) {
+                            return (
+                                <div className="match">
+                                    {game.team.map((team) => (
+                                        <div className="match-team">
+                                            <div className="match-team-info">
+                                                <img
+                                                    src={
+                                                        team.image === ""
+                                                            ? unknownImage
+                                                            : team.image
+                                                    }
+                                                    alt={team.name + "flag"}
+                                                />
+                                                <p>{team.name}</p>
+                                            </div>
+                                            <div className="match-team-score">
+                                                <p>{team.score}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            );
+                        }
+                    })}
                 </div>
                 <div className="container-linker">
                     <svg width="50" height="575">
@@ -403,7 +354,7 @@ function Bracket() {
                     L 50 130
                     M 24 77
                     L 0 77
-                    
+
                     M 50 235
                     L 24 235
                     L 24 340
@@ -419,112 +370,30 @@ function Bracket() {
                 </div>
                 <div className="container-round16">
                     <div className="container-title">
-                        <h4>Round of 16</h4>
+                        <h4>{bracket[0].name}</h4>
                     </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg"
-                                    alt="flag"
-                                />
-                                <p>England</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/SN/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Senegal</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/FR/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>France</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/PL/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Poland</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/MA/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Morocco</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/ES/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Spain</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="match">
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/PT/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Portugal</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div className="match-team">
-                            <div className="match-team-info">
-                                <img
-                                    src="https://flagsapi.com/CH/flat/64.png"
-                                    alt="flag"
-                                />
-                                <p>Switzerland</p>
-                            </div>
-                            <div className="match-team-score">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
+                    {bracket[0].games.map((game, index) => {
+                        if (index > bracket[0].games.length / 2 - 1) {
+                            return (
+                                <div className="match">
+                                    {game.team.map((team) => (
+                                        <div className="match-team">
+                                            <div className="match-team-info">
+                                                <img
+                                                    src={team.image}
+                                                    alt={team.name + "flag"}
+                                                />
+                                                <p>{team.name}</p>
+                                            </div>
+                                            <div className="match-team-score">
+                                                <p>{team.score}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            );
+                        }
+                    })}
                 </div>
             </div>
             <hr />
