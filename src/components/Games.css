@@ -84,14 +84,11 @@
     }
     .Matches-match-info p
     {
-        font-size: 12px;
-    }
-    .Matches-match-info > :first-child {
         font-size: 10px;
     }
 }
 @media screen and (max-width: 350px) {
     .Matches-match-info p {
-        font-size: 10px;
+        font-size: 8px;
     }
 }
