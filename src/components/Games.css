@@ -37,7 +37,7 @@
 .team-score h1
 {
     color: black;
-    font-size: 3vw;
+    font-size: 36px;
 }
 .Matches-match-team > img
 {
@@ -75,7 +75,7 @@
     }
     .team-score h1 {
         padding-top: 8px;
-        font-size: 100%;
+        font-size: 22px;
     }
     .Matches-match-info {
         padding-top: 14px;
