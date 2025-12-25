@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Bracket.css";
+import { fetchJsonFile } from "../firebase/storage";
 import { getFromApi } from "../assets/scripts/GetFromApi";
 
 import worldCupImage from "../assets/images/world-cup.png";
@@ -11,10 +12,17 @@ function Bracket() {
     const [bracket, SetBracket] = useState([]);
 
     useEffect(() => {
-        getFromApi(
-            "https://uuinc.github.io/projects/world-cup-schedule/bracket.json"
-        ).then((result) => SetBracket(result.bracket));
-    }, [bracket]);
+        // getFromApi(
+        //     "https://uuinc.github.io/projects/world-cup-schedule/bracket.json"
+        // ).then((result) => SetBracket(result.bracket));
+
+        const fetchData = async () => {
+            const data = await fetchJsonFile();
+            SetBracket(data);
+        };
+        fetchData();
+
+    }, []);
 
     return (
         <div className="Bracket">
@@ -175,7 +183,7 @@ function Bracket() {
                                 <img
                                     src={
                                         bracket[4]?.games[0].team[0].image ===
-                                        ""
+                                            ""
                                             ? unknownImage
                                             : bracket[4]?.games[0].team[0].image
                                     }
@@ -195,7 +203,7 @@ function Bracket() {
                                 <img
                                     src={
                                         bracket[4]?.games[0].team[1].image ===
-                                        ""
+                                            ""
                                             ? unknownImage
                                             : bracket[4]?.games[0].team[1].image
                                     }
@@ -221,7 +229,7 @@ function Bracket() {
                                 <img
                                     src={
                                         bracket[3]?.games[0].team[0].image ===
-                                        ""
+                                            ""
                                             ? unknownImage
                                             : bracket[3]?.games[0].team[0].image
                                     }
@@ -242,7 +250,7 @@ function Bracket() {
                                 <img
                                     src={
                                         bracket[3]?.games[0].team[1].image ===
-                                        ""
+                                            ""
                                             ? unknownImage
                                             : bracket[3]?.games[0].team[1].image
                                     }
